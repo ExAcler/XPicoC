@@ -23,7 +23,7 @@ The merge_tilua.sh will generate a Lua script named tilua_picoc.lua, which is de
 
 # Running XPicoC
 
-##### Desktop Lua
+### Desktop Lua
 If you deploy XPicoC on a desktop version of Lua, then you will be able to use it just like how you use the original PicoC. Just type:
 
 lua lua_picoc.lua \[arguments\]
@@ -32,7 +32,7 @@ and you are done.
 
 Please read the original PicoC README for information about command line arguments.
 
-##### TI-Lua
+### TI-Lua
 If you deploy XPicoC on TI-Lua, then things are different.
 
 After you click Set Script when you deploy XPicoC, the document Page 1.1 will become a Command Prompt and automatically enter the PicoC Interactive Mode. You can play with it by directly typing in C statements; however, if you would like to run a piece of C code, it is also simple. Just follow these instructions:
