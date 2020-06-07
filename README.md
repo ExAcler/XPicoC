@@ -1,7 +1,9 @@
 # Description
 
 XPicoC is a Lua implementation of a very small C intepreter designed for embedded systems, PicoC. It is originally designed to bypass the ban on progammability in C that Texas Instruments imposes on its flagship graphing calculator, the TI-Nspire CX series. It aims to let people write and execute C programs on TI-Nspire CX graphing calculators without the need to do jailbreaking as some famous projects like Ndless do. Despite those, it is also a successful and maybe the first implementation of a C intepreter with full functionality, like the support of pointer arithmetic, on the Lua scripting language. It is also tested on Lua 5.3.5 on macOS 10.14.6 and is easy to be ported to other platforms.
+
 You can find the PicoC project here: https://github.com/jpoirier/picoc
+
 For some techical details, please refer to the original PicoC project.
 
 # Deploying XPicoC
@@ -21,6 +23,7 @@ The merge_tilua.sh will generate a Lua script named tilua_picoc.lua, which is de
 
 # Running XPicoC
 
+##### Desktop Lua
 If you deploy XPicoC on a desktop version of Lua, then you will be able to use it just like how you use the original PicoC. Just type:
 
 lua lua_picoc.lua \[arguments\]
@@ -29,6 +32,7 @@ and you are done.
 
 Please read the original PicoC README for information about command line arguments.
 
+##### TI-Lua
 If you deploy XPicoC on TI-Lua, then things are different.
 
 After you click Set Script when you deploy XPicoC, the document Page 1.1 will become a Command Prompt and automatically enter the PicoC Interactive Mode. You can play with it by directly typing in C statements; however, if you would like to run a piece of C code, it is also simple. Just follow these instructions:
