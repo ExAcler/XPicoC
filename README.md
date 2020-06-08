@@ -44,7 +44,11 @@ After you click Set Script when you deploy XPicoC, the document Page 1.1 will be
 
 We are currently working on adding more features to let you use the Command Prompt more easily.
 
-# Unimplemented Functions
+# C Standard Library Functions
+
+For a list of supported C standard and custom libraries, please read c_libraries.md. 
+
+# Unimplemented Features
 
 We have implemented most of the features and functions from PicoC, but not all.
 
