@@ -3,6 +3,8 @@
 
 char a[10];
 
+memset(a, 'q', sizeof(a));
+printf("%s\n", a);
 strcpy(a, "hello");
 printf("%s\n", a);
 
@@ -23,9 +25,9 @@ printf("%d\n", strncmp(a, "goere", 2) == 0);
 printf("%d\n", strncmp(a, "goerg", 2) == 0);
 printf("%d\n", strncmp(a, "zebra", 2) < 0);
 
-printf("%s\n", index(a, 'o'));
-printf("%s\n", rindex(a, 'l'));
-printf("%d\n", rindex(a, 'x') == NULL);
+printf("%s\n", strchr(a, 'o'));
+printf("%s\n", strrchr(a, 'l'));
+printf("%d\n", strrchr(a, 'x') == NULL);
 
 memset(&a[1], 'r', 4);
 printf("%s\n", a);

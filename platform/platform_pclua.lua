@@ -65,8 +65,8 @@ end
 
 function PlatformExit(pc, RetVal)
     pc.PicocExitValue = RetVal
-    error("C Parsing Error")
-    --os.exit(RetVal)
+    --error("C Parsing Error")
+    os.exit(RetVal)
 end
 
 function GetSystemCounter()

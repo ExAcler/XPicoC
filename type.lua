@@ -120,7 +120,7 @@ function TypeInit(pc)
         pc.StrEmpty, 4, PointerAlignBytes)
     pc.CharPtrPtrType = TypeAdd(pc, nil, pc.CharPtrType, BaseType.TypeArray, 0,
         pc.StrEmpty, 4, PointerAlignBytes)
-    pc.VoidPtrType = TypeAdd(pc, nil, pc.VoidType, BaseType.TypeArray, 0,
+    pc.VoidPtrType = TypeAdd(pc, nil, pc.VoidType, BaseType.TypePointer, 0,
         pc.StrEmpty, 4, PointerAlignBytes)
 end
 

@@ -453,13 +453,12 @@ function PointerStringLen(FromValue)
     local Offset = FromValue.Offset
     local RawValue = string.sub(FromValue.RawValue.Val, 1 + Offset)
 
-    for i = 1, string.len(RawValue) do
-        if string.sub(RawValue, i, i) == '\0' then
-            return i - 1
-        end
+    local i = string.find(RawValue, '\0')
+    if i then
+        return i - 1
+    else
+        return string.len(RawValue)
     end
-
-    return string.len(RawValue)
 end
 
 function PointerGetString(FromValue)

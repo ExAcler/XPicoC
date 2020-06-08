@@ -1,73 +1,73 @@
 function MathSin(Parser, ReturnValue, Param, NumArgs, ParamStartStackId)
-    local Val = math.sin(PointerGetFP(Param[0].Val))
+    local Val = math.sin(PointerGetFP(Param[1].Val))
     PointerSetFP(ReturnValue.Val, Val)
 end
 
 function MathCos(Parser, ReturnValue, Param, NumArgs, ParamStartStackId)
-    local Val = math.cos(PointerGetFP(Param[0].Val))
+    local Val = math.cos(PointerGetFP(Param[1].Val))
     PointerSetFP(ReturnValue.Val, Val)
 end
 
 function MathTan(Parser, ReturnValue, Param, NumArgs, ParamStartStackId)
-    local Val = math.tan(PointerGetFP(Param[0].Val))
+    local Val = math.tan(PointerGetFP(Param[1].Val))
     PointerSetFP(ReturnValue.Val, Val)
 end
 
 function MathAsin(Parser, ReturnValue, Param, NumArgs, ParamStartStackId)
-    local Val = math.asin(PointerGetFP(Param[0].Val))
+    local Val = math.asin(PointerGetFP(Param[1].Val))
     PointerSetFP(ReturnValue.Val, Val)
 end
 
 function MathAcos(Parser, ReturnValue, Param, NumArgs, ParamStartStackId)
-    local Val = math.acos(PointerGetFP(Param[0].Val))
+    local Val = math.acos(PointerGetFP(Param[1].Val))
     PointerSetFP(ReturnValue.Val, Val)
 end
 
 function MathAtan(Parser, ReturnValue, Param, NumArgs, ParamStartStackId)
-    local Val = math.atan(PointerGetFP(Param[0].Val))
+    local Val = math.atan(PointerGetFP(Param[1].Val))
     PointerSetFP(ReturnValue.Val, Val)
 end
 
 function MathAtan2(Parser, ReturnValue, Param, NumArgs, ParamStartStackId)
-    local Val = math.atan(PointerGetFP(Param[0].Val),
-        PointerGetFP(Param[1].Val))
+    local Val = math.atan(PointerGetFP(Param[1].Val),
+        PointerGetFP(Param[2].Val))
     PointerSetFP(ReturnValue.Val, Val)
 end
 
 function MathSinh(Parser, ReturnValue, Param, NumArgs, ParamStartStackId)
-    local Val = math.sinh(PointerGetFP(Param[0].Val))
+    local Val = math.sinh(PointerGetFP(Param[1].Val))
     PointerSetFP(ReturnValue.Val, Val)
 end
 
 function MathCosh(Parser, ReturnValue, Param, NumArgs, ParamStartStackId)
-    local Val = math.cosh(PointerGetFP(Param[0].Val))
+    local Val = math.cosh(PointerGetFP(Param[1].Val))
     PointerSetFP(ReturnValue.Val, Val)
 end
 
 function MathTanh(Parser, ReturnValue, Param, NumArgs, ParamStartStackId)
-    local Val = math.tanh(PointerGetFP(Param[0].Val))
+    local Val = math.tanh(PointerGetFP(Param[1].Val))
     PointerSetFP(ReturnValue.Val, Val)
 end
 
 function MathExp(Parser, ReturnValue, Param, NumArgs, ParamStartStackId)
-    local Val = math.exp(PointerGetFP(Param[0].Val))
+    local Val = math.exp(PointerGetFP(Param[1].Val))
     PointerSetFP(ReturnValue.Val, Val)
 end
 
 function MathFabs(Parser, ReturnValue, Param, NumArgs, ParamStartStackId)
-    local Val = math.abs(PointerGetFP(Param[0].Val))
+    local Val = math.abs(PointerGetFP(Param[1].Val))
     PointerSetFP(ReturnValue.Val, Val)
 end
 
 function MathFmod(Parser, ReturnValue, Param, NumArgs, ParamStartStackId)
-    local Val = math.fmod(PointerGetFP(Param[0].Val),
-        PointerGetFP(Param[1].Val))
+    local Val = math.fmod(PointerGetFP(Param[1].Val),
+        PointerGetFP(Param[2].Val))
     PointerSetFP(ReturnValue.Val, Val)
 end
 
 function MathFrexp(Parser, ReturnValue, Param, NumArgs, ParamStartStackId)
-    local m, e = math.frexp(PointerGetFP(Param[0].Val))
-    local Param1 = PointerDereference(Param[1].Val)
+    local m, e = math.frexp(PointerGetFP(Param[1].Val))
+    local Param1 = PointerDereference(Param[2].Val)
     if Param1 ~= nil then
         PointerSetSignedOrUnsignedInt(Param1, e)
     end
@@ -75,24 +75,24 @@ function MathFrexp(Parser, ReturnValue, Param, NumArgs, ParamStartStackId)
 end
 
 function MathLdexp(Parser, ReturnValue, Param, NumArgs, ParamStartStackId)
-    local Val = math.ldexp(PointerGetFP(Param[0].Val),
-        PointerGetSignedInt(Param[1].Val))
+    local Val = math.ldexp(PointerGetFP(Param[1].Val),
+        PointerGetSignedInt(Param[2].Val))
     PointerSetFP(ReturnValue.Val, Val)
 end
 
 function MathLog(Parser, ReturnValue, Param, NumArgs, ParamStartStackId)
-    local Val = math.log(PointerGetFP(Param[0].Val))
+    local Val = math.log(PointerGetFP(Param[1].Val))
     PointerSetFP(ReturnValue.Val, Val)
 end
 
 function MathLog10(Parser, ReturnValue, Param, NumArgs, ParamStartStackId)
-    local Val = math.log10(PointerGetFP(Param[0].Val))
+    local Val = math.log10(PointerGetFP(Param[1].Val))
     PointerSetFP(ReturnValue.Val, Val)
 end
 
 function MathModf(Parser, ReturnValue, Param, NumArgs, ParamStartStackId)
-    local i, f = math.modf(PointerGetFP(Param[0].Val))
-    local Param1 = PointerDereference(Param[1].Val)
+    local i, f = math.modf(PointerGetFP(Param[1].Val))
+    local Param1 = PointerDereference(Param[2].Val)
     if Param1 ~= nil then
         PointerSetFP(Param1, i)
     end
@@ -100,28 +100,28 @@ function MathModf(Parser, ReturnValue, Param, NumArgs, ParamStartStackId)
 end
 
 function MathPow(Parser, ReturnValue, Param, NumArgs, ParamStartStackId)
-    local Val = math.pow(PointerGetFP(Param[0].Val),
-        PointerGetFP(Param[1].Val))
+    local Val = math.pow(PointerGetFP(Param[1].Val),
+        PointerGetFP(Param[2].Val))
     PointerSetFP(ReturnValue.Val, Val)
 end
 
 function MathSqrt(Parser, ReturnValue, Param, NumArgs, ParamStartStackId)
-    local Val = math.sqrt(PointerGetFP(Param[0].Val))
+    local Val = math.sqrt(PointerGetFP(Param[1].Val))
     PointerSetFP(ReturnValue.Val, Val)
 end
 
 function MathRound(Parser, ReturnValue, Param, NumArgs, ParamStartStackId)
-    local Val = math.ceil(PointerGetFP(Param[0].Val) - 0.5)
+    local Val = math.ceil(PointerGetFP(Param[1].Val) - 0.5)
     PointerSetFP(ReturnValue.Val, Val)
 end
 
 function MathCeil(Parser, ReturnValue, Param, NumArgs, ParamStartStackId)
-    local Val = math.ceil(PointerGetFP(Param[0].Val))
+    local Val = math.ceil(PointerGetFP(Param[1].Val))
     PointerSetFP(ReturnValue.Val, Val)
 end
 
 function MathFloor(Parser, ReturnValue, Param, NumArgs, ParamStartStackId)
-    local Val = math.floor(PointerGetFP(Param[0].Val))
+    local Val = math.floor(PointerGetFP(Param[1].Val))
     PointerSetFP(ReturnValue.Val, Val)
 end
 
