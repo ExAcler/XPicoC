@@ -376,7 +376,6 @@ function ExpressionCoerceInteger(Val)
             return 0xCCCC
         end
     elseif Val.Typ.Base == BaseType.TypeFP then
-        print("FP")
         return (math.floor(PointerGetFP(Val.Val)) + 0x80000000) % 0x100000000 - 0x80000000
     else
         return 0

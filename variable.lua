@@ -202,11 +202,7 @@ function VariableAllocValueShared(Parser, FromValue)
 end
 
 function VariableRealloc(Parser, FromValue, NewSize)
-    local RawValue = ""
-    for i = 1, NewSize do
-        RawValue = RawValue .. "\000"
-    end
-
+    local RawValue = string.rep('\000', NewSize)
     FromValue.Val.RawValue.Val = RawValue
 end
 

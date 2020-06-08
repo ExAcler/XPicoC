@@ -649,7 +649,10 @@ function PointerCopyPointer(DestValue, FromValue)
     local RefOffset = FromValue.RefOffsets[FromRawValue]
     local Pointer = FromValue.Pointer[FromRawValue]
 
-    assert(RefOffset ~= nil and Pointer ~= nil, "PointerCopyPointer: No reference in pointer")
+    if RefOffset == nil or Pointer == nil then
+        return
+    end
+    --assert(RefOffset ~= nil and Pointer ~= nil, "PointerCopyPointer: No reference in pointer")
 
     DestRawValue = string.sub(DestRawValue, 1, DestOffset) ..
         FromRawValue .. string.sub(DestRawValue,

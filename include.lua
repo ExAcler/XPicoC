@@ -1,7 +1,9 @@
 function IncludeInit(pc)
     IncludeRegister(pc, "math.h", nil, MathFunctions, nil)
     IncludeRegister(pc, "stdio.h", StdioSetupFunc, StdioFunctions, StdioDefs)
+    IncludeRegister(pc, "stdlib.h", StdlibSetupFunc, StdlibFunctions, nil)
     IncludeRegister(pc, "string.h", StringSetupFunc, StringFunctions, nil)
+    
     IncludeRegister(pc, "console.h", nil, ConsoleFunctions, nil)
 end
 
