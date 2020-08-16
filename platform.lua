@@ -13,7 +13,7 @@ INTERACTIVE_PROMPT_STATEMENT = "picoc> "
 INTERACTIVE_PROMPT_LINE = "     > "
 
 INTERACTIVE_HEAD_STATEMENT = [[
-Lua-PicoC v2.3.2  Copyright (c) 2009-2020 Jimmy Lin, Zik Saleeba, Joseph Poirier
+XPicoC v0.1-alpha (Core version 2.3.2) Copyright (c) 2009-2020 Jimmy Lin, Zik Saleeba, Joseph Poirier
 ]]
 
 function PicocInitialize(pc, NoIOInit)

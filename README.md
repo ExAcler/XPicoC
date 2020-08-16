@@ -1,18 +1,20 @@
 # Description
 
-XPicoC is a Lua implementation of a very small C intepreter designed for embedded systems, PicoC. It is originally designed to bypass the ban on progammability in C that Texas Instruments imposes on its flagship graphing calculator, the TI-Nspire CX series. It aims to let people write and execute C programs on TI-Nspire CX graphing calculators without the need to do jailbreaking as some famous projects like Ndless do. Despite those, it is also a successful and maybe the first implementation of a C intepreter with full functionality, like the support of pointer arithmetic, on the Lua scripting language. It is also tested on Lua 5.3.5 on macOS 10.14.6 and is easy to be ported to other platforms.
+XPicoC is a Lua implementation of a very small C intepreter designed for embedded systems, PicoC. It is originally designed to bypass the ban on progammability in C that Texas Instruments imposes on its flagship graphing calculator, the TI-Nspire CX series. It aims to let people write and execute C programs on TI-Nspire CX graphing calculators without the need to do jailbreaking as some famous projects like Ndless do. Despite those, it is also a successful and maybe the first implementation of a C intepreter with full functionality, like the support of pointer arithmetic, on the Lua scripting language. It is also tested on Lua 5.3.5 on macOS 10.15 and is easy to be ported to other platforms.
 
 You can find the PicoC project here: https://github.com/jpoirier/picoc
 
-For some techical details, please refer to the original PicoC project.
+For technical details of PicoC, please refer to the original PicoC project.
 
 # Deploying XPicoC
 
-You can find two .sh files inside the repository root directory.
+The pre-built releases of XPicoC can be found in the "Release" section.
 
-The merge.sh will generate an executable Lua script named lua_picoc.lua, which is designed to use with desktop versions of Lua, in the same directory.
+If you would like to build your own release, you may use the two .sh files inside the repository root directory. These files are designed to use with a POSIX-compliant shell and list what Lua files are needed to build XPicoC for each platform. If you are using Windows without a POSIX shell installed, you will need to modify these files in order for them to work. 
 
-The merge_tilua.sh will generate a Lua script named tilua_picoc.lua, which is designed to use with TI-Lua, in the same directory. To use it with TI-Lua, you need to first have TI-Nspire CX Student Software or Teacher Software installed on your PC or Mac. Then you should follow these instructions:
+merge.sh will generate an executable Lua script named lua_picoc.lua designed to use with desktop versions of Lua.
+
+merge_tilua.sh will generate a Lua script named tilua_picoc.lua designed to use with TI-Lua. To use it with TI-Lua, A TI-Nspire CX Student Software or Teacher Software must first be installed on your PC or Mac. Then follow these instructions:
 
 1. Start TI-Nspire CX Student Software or Teacher Software.
 2. Create a new TI-Nspire document.
@@ -35,9 +37,9 @@ Please read the original PicoC README for information about command line argumen
 ### TI-Lua
 If you deploy XPicoC on TI-Lua, then things are different.
 
-After you click Set Script when you deploy XPicoC, the document Page 1.1 will become a Command Prompt and automatically enter the PicoC Interactive Mode. You can play with it by directly typing in C statements; however, if you would like to run a piece of C code, it is also simple. Just follow these instructions:
+After you click Set Script when you deploy XPicoC, the document Page 1.1 will become a Command Prompt and automatically enter the PicoC Interactive Mode. You can, for sure, play with it by directly typing in C statements. You may also run existing C code by following these instructions:
 
-1. Inserts a Notes application into the TI-Nspire document.
+1. Insert a Notes application into a TI-Nspire document.
 2. Type in your C code inside the Notes application.
 3. Press Ctrl+A to select all of your code, and press Ctrl+C to copy it.
 4. Switch back to Page 1.1, Press Ctrl+V (or press the Menu key and select Run > Run code from clipboard)
