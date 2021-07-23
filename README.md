@@ -6,6 +6,12 @@ You can find the PicoC project here: https://github.com/jpoirier/picoc
 
 For technical details of PicoC, please refer to the original PicoC project.
 
+👇 Watch a live demo!
+
+![](https://raw.githubusercontent.com/ExAcler/XPicoC/master/gifs/1.gif)
+
+![](https://raw.githubusercontent.com/ExAcler/XPicoC/master/gifs/2.gif)
+
 # Deploying XPicoC
 
 The pre-built releases of XPicoC can be found in the "Release" section.
